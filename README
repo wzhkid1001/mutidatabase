@@ -5,3 +5,4 @@ java.lang.ClassNotFoundException: com.mysql.jdbc.jdbc2.optional.MysqlXADataSourc
 2. atomikos:需要对数据源取名：
 unique-resource-name: 
 
+3. 利用jtp-atomikos 实现分布式事务，XA规范在java的实现，效率较低，不推荐在mysql数据库使用
