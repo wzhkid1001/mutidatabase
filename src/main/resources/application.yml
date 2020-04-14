@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    show-sql: true
+  jta:
+    enabled: true
+    atomikos:
+      datasource:
+        master:
+          xa-properties.url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+          xa-properties.user: root
+          xa-properties.password: root
+          xa-data-source-class-name: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+          unique-resource-name: master
+        slave:
+          xa-properties.url: jdbc:mysql://127.0.0.1:3306/test1?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+          xa-properties.user: root
+          xa-properties.password: root
+          xa-data-source-class-name: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+          unique-resource-name: slave
+server:
+  port: 8083

@@ -1,0 +1,7 @@
+1. mysql-connector-java版本过高会导致报错
+Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.atomikos.jdbc.AtomikosSQLException: The class 'com.mysql.jdbc.jdbc2.optional.MysqlXADataSource' specified by property 'xaDataSourceClassName' could not be found in the classpath. Please make sure the spelling is correct, and that the required jar(s) are in the classpath.] with root cause
+java.lang.ClassNotFoundException: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+
+2. atomikos:需要对数据源取名：
+unique-resource-name: 
+
